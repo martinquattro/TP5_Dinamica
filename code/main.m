@@ -5,6 +5,7 @@ clear all; close all; clc;
 % Autor: Quattrone Martin y Segura Lola
 
 addpath('tools');
+fprintf('Obtencion del modelo dinamico inverso...\n\n')
 
 % Definicion de parametros.
 d = 0;
@@ -51,6 +52,8 @@ C11 = 1/2 * diff(m11,q) * q_dot;
 
 % Calculo del torque.
 tau = simplify(m11 * q_2dot + C11 * q_dot + G1);
+fprintf('tau = \n')
+disp(tau)
 
 % Estimacion por cuadrados minimos
 datos_pendulo
