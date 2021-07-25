@@ -52,6 +52,10 @@ C11 = 1/2 * diff(m11,q) * q_dot;
 % Calculo del torque.
 tau = simplify(m11 * q_2dot + C11 * q_dot + G1);
 
+% Estimacion por cuadrados minimos
+datos_pendulo
+LSestimation
+
 
 
 
