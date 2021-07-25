@@ -52,7 +52,14 @@ C11 = 1/2 * diff(m11,q) * q_dot;
 % Calculo del torque.
 tau = simplify(m11 * q_2dot + C11 * q_dot + G1);
 
+% -- Estimacion de los parametros dinamicos
+p_kn = [ m ];
+p_un = [ mXg mYg Iozz ];
 
+phi_kn = [ q_2dot*a^2 + g*cos(q) ].';
+phi_un = [ 2*q_2dot*a + g*cos(q) , g*sin(q) , q_2dot].';
+
+tau - phi_kn * p_kn
 
 
 
