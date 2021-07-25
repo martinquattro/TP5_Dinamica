@@ -1,6 +1,6 @@
 % -- Estimacion de los parametros dinamicos
 
-
+% Inicializacion de datos
 datos_pendulo
 
 m_value =     2;
