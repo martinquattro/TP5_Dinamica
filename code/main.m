@@ -89,9 +89,9 @@ q2p = 1/M * (tau - b*qp - C - G);
 
 fprintf('El modelo directo resulta \nq2p = %s\n', q2p)
 
-M_evaluate = vpa(subs(M, [m a xG yG Iozz], [m_value a_value xG_hat yG_hat Iozz_hat]),7)
-C_evaluate = vpa(subs(C, [m a xG yG Iozz], [m_value a_value xG_hat yG_hat Iozz_hat]),7)
-G_evaluate = vpa(subs(G, [m a xG yG Iozz g1], [m_value a_value xG_hat yG_hat Iozz_hat g_value]),7)
+M_evaluate = vpa(subs(M, [m a xG yG Iozz], [m_value a_value xG_hat yG_hat Iozz_hat]),7);
+C_evaluate = vpa(subs(C, [m a xG yG Iozz], [m_value a_value xG_hat yG_hat Iozz_hat]),7);
+G_evaluate = vpa(subs(G, [m a xG yG Iozz g1], [m_value a_value xG_hat yG_hat Iozz_hat g_value]),7);
 
 u = [0.1, 2, 3];                % torque aplicados a simular [Nm]
 b_values = [0 , 0.1];           % coeficiente viscoso [Nm/rad/s]

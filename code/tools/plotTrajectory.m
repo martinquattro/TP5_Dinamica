@@ -6,7 +6,7 @@ function plotTrajectory(x1,y1,x2, y2, img)
     legend({'Sin termino disipativo' 'Con termino disipativo'},...
         'Interpreter','Latex', "location", "northeast");
     xlabel('Tiempo [seg]','Interpreter','Latex')
-    ylabel('q(t) [rad]/seg','Interpreter','Latex')
+    ylabel('q(t) [rad]','Interpreter','Latex')
     grid on; grid minor;
     print(strcat('./plots/trayectoria_', num2str(img), '.png'),'-dpng');
 end

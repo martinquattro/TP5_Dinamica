@@ -6,8 +6,8 @@ function [tode, X] = myOde45(tspan, x0, odeOptions, u, b_value)
         q = x(1);
         q_p = x(2);
         
-        G = 2.938*cos(q) + 9.068e-5*sin(q);
-        M = 0.04599;
+        G = 2.938334*cos(q) + 0.00009068205*sin(q);
+        M = 0.04598582;
         C = 0.0;
         
         q_2p = M^-1*(u - b_value*q_p - C*q_p - G);
